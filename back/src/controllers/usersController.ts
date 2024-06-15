@@ -1,5 +1,4 @@
 import { json, Request, Response } from "express";
-import Iuser from "../interfaces/User";
 import {
   createUserService,
   getUserService,
@@ -7,6 +6,7 @@ import {
   getUserByIdService,
 } from "../services/userService";
 import { User } from "../entities/user";
+
 
 export const createUser = async (req: Request, res: Response) => {
   const { name, email, age, active } = req.body;
