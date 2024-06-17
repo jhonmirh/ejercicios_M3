@@ -16,6 +16,7 @@ export const getUserService = async ():Promise<User[]>=> {
   const users = await userModel.find();
   return users;
   };
+  
   export const getUserByIdService =async(id:number):Promise<User|null>=>{
   const user=await userModel.findOneBy({
     id
